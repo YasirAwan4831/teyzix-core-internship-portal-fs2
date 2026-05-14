@@ -4,7 +4,7 @@
 
 #  TEYZIX CORE Internship Portal
 
-### ✨ Modern Full-Stack Internship Management System ✨
+### ✨ Modern Full-Stack Internship Portorl ✨
 
 <p align="center">
 A powerful and professional internship portal built with modern web technologies, smooth animations, responsive UI, and scalable backend architecture.
@@ -103,21 +103,74 @@ The goal of this project is to build a **professional, scalable, and modern inte
 # 📂 Project Structure
 
 ```bash
-TEYZIX-CORE/
-│
-├── client/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── assets/
-│
-├── server/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   └── config/
-│
-└── README.md
+teyzix-core-portal/
+├─ client/
+│  ├─ dist/
+│  │  ├─ assets/
+│  │  │  ├─ index-B50JeYTQ.css
+│  │  │  └─ index-WIs0T0k4.js
+│  │  ├─ favicon.svg
+│  │  ├─ icons.svg
+│  │  └─ index.html
+│  ├─ public/
+│  │  ├─ favicon.svg
+│  │  └─ icons.svg
+│  ├─ src/
+│  │  ├─ assets/
+│  │  │  ├─ hero.png
+│  │  │  ├─ react.svg
+│  │  │  └─ vite.svg
+│  │  ├─ components/
+│  │  │  ├─ Footer.jsx
+│  │  │  └─ Navbar.jsx
+│  │  ├─ context/
+│  │  │  └─ ThemeContext.jsx
+│  │  ├─ pages/
+│  │  │  ├─ Admin.jsx
+│  │  │  ├─ Apply.jsx
+│  │  │  ├─ Contact.jsx
+│  │  │  ├─ Home.jsx
+│  │  │  └─ Internships.jsx
+│  │  ├─ App.css
+│  │  ├─ App.jsx
+│  │  ├─ index.css
+│  │  └─ main.jsx
+│  ├─ .gitignore
+│  ├─ eslint.config.js
+│  ├─ index.html
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ README.md
+│  └─ vite.config.js
+├─ server/
+│  ├─ config/
+│  │  └─ db.js
+│  ├─ controllers/
+│  │  ├─ applicationController.js
+│  │  └─ internshipController.js
+│  ├─ data/
+│  │  └─ internships.js
+│  ├─ middleware/
+│  │  └─ errorMiddleware.js
+│  ├─ models/
+│  │  ├─ Application.js
+│  │  └─ Internship.js
+│  ├─ routes/
+│  │  ├─ applicationRoutes.js
+│  │  └─ internshipRoutes.js
+│  ├─ .env
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ seeder.js
+│  └─ server.js
+├─ .env.example
+├─ .gitignore
+├─ CONTRIBUTING.md
+├─ LICENSE
+├─ package.json
+├─ README.md
+└─ SETUP.md
+
 ```
 
 
@@ -149,4 +202,3 @@ TEYZIX-CORE/
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=120&section=footer"/>
 
 </div>
-
