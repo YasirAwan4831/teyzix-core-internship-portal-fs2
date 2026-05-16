@@ -1,0 +1,35 @@
+{
+  "name": "teyzix-core-portal",
+  "version": "1.0.0",
+  "description": "A modern, responsive MERN stack internship portal with premium UI/UX, smooth animations, and dark mode support",
+  "private": true,
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": [
+    "internship",
+    "portal",
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "vite",
+    "tailwind-css",
+    "framer-motion"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm start --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "lint": "npm run lint --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "devDependencies": {}
+}
