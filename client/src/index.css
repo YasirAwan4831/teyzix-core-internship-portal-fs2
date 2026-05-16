@@ -1,0 +1,456 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8b5cf6;
+  --color-primary-dark: #7c3aed;
+  --color-secondary: #ec4899;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --panel-bg: rgba(255, 255, 255, 0.7);
+    --panel-border: rgba(226, 232, 240, 0.8);
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-border: #e2e8f0;
+  }
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  @apply font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-600 min-h-screen transition-colors duration-300;
+  position: relative;
+}
+
+/* Add subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-panel {
+  background-color: var(--panel-bg);
+  border-color: var(--panel-border);
+  @apply backdrop-blur-md border rounded-2xl transition-all duration-300;
+}
+
+.glass-panel h2,
+.glass-panel h3,
+.glass-panel p {
+  @apply text-slate-900;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500;
+}
+
+.btn-primary {
+  @apply px-6 py-2.5 rounded-full font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center justify-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-outline {
+  @apply px-6 py-2.5 rounded-full font-semibold border border-slate-300 hover:bg-slate-100 text-slate-700 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5;
+}
+
+.input-field {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-main);
+  @apply w-full border rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-400/50 transition-all placeholder:text-slate-400;
+}
+
+.input-field::placeholder {
+  @apply text-slate-400;
+}
+
+.input-field:focus {
+  @apply border-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)];
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Card and Panel Styling */
+.card {
+  @apply bg-white border border-slate-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+}
+
+.card-title {
+  @apply text-xl font-bold text-slate-900;
+}
+
+.card-text {
+  @apply text-slate-600;
+}
+
+/* Table Styling */
+table {
+  @apply w-full border-collapse;
+}
+
+table thead {
+  @apply bg-gradient-to-r from-slate-100 to-slate-50;
+}
+
+table th {
+  @apply px-4 py-3 text-left font-semibold text-slate-900 border-b border-slate-200;
+}
+
+table td {
+  @apply px-4 py-3 text-slate-700 border-b border-slate-200;
+}
+
+table tbody tr {
+  @apply hover:bg-emerald-50 transition-colors;
+}
+
+/* Form Elements */
+label {
+  @apply text-slate-700 font-medium text-sm;
+}
+
+select,
+textarea {
+  @apply bg-white text-slate-900 border-slate-300;
+}
+
+button {
+  @apply text-slate-900;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Advanced CSS Enhancements */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input Focus Enhancement */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+/* Button Animations */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Link Styling */
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+/* Section Padding */
+section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+/* Container Enhancement */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Badge Styling */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold text-white bg-violet-600;
+}
+
+.badge-secondary {
+  @apply bg-slate-200 text-slate-900;
+}
+
+/* Advanced CSS Enhancements */
+.glass-panel {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top-left, rgba(16, 185, 129, 0.08), transparent 80%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.glass-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at bottom-right, rgba(236, 72, 153, 0.05), transparent 80%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.input-field {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15), inset 0 0 25px rgba(16, 185, 129, 0.08);
+  transform: translateY(-1px);
+}
+
+.input-field::placeholder {
+  transition: color 0.3s ease;
+}
+
+.input-field:focus::placeholder {
+  color: rgba(100, 116, 139, 0.4);
+}
+
+/* Enhanced Button Transitions */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+button:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Smooth Link Transitions */
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Enhanced Text Selection */
+::selection {
+  @apply bg-emerald-500/40 text-emerald-700;
+}
+
+/* Focus Ring Styling */
+:focus-visible {
+  @apply outline-none ring-2 ring-emerald-400 ring-offset-2;
+}
+
+/* Smooth Scrolling */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved Form Elements */
+textarea, input, select {
+  @apply transition-all duration-300;
+}
+
+textarea:focus, input:focus, select:focus {
+  @apply ring-emerald-200;
+}
+
+/* Card Hover Effects */
+.card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Smooth Transitions for All Elements */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Disable transition for animation-heavy elements */
+[data-no-transition] {
+  @apply !transition-none;
+}
+
+/* Enhanced Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, #10b981, #14b8a6, #10b981);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Improved Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply transition-colors duration-300;
+}
+
+/* Loading State */
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Smooth Page Transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Bar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-emerald-400;
+}
+
+/* ======================================================== */
+/* EXPERIMENTAL TESTING SECTION - CAN BE REMOVED LATER */
+/* ======================================================== */
+
+/* 1. Applying Professional Fonts */
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .card-title, .font-bold {
+  font-family: 'Outfit', sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* 2. Interactive Box/Card Effects */
+.glass-panel, .card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-panel:hover, .card:hover {
+  background-color: #ffffff !important;
+  border-color: #10b981 !important; /* Emerald border */
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.1), 0 8px 10px -6px rgba(16, 185, 129, 0.1) !important;
+  transform: translateY(-5px) scale(1.01) !important;
+}
+
+.glass-panel:active, .card:active {
+  transform: translateY(0) scale(0.98) !important;
+  background-color: #f8fafc !important;
+}
+
+/* 3. Button Active States */
+.btn-primary:active {
+  transform: scale(0.95) !important;
+}
+/* ======================================================== */

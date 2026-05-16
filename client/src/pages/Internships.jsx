@@ -5,22 +5,23 @@ import axios from 'axios';
 import { MapPin, Clock, Briefcase, ChevronRight, AlertCircle, Code, Layout, Smartphone, Database, Terminal, LineChart, Cpu, Brain, PenTool, TrendingUp, Image as ImageIcon, Binary } from 'lucide-react';
 
 const getIconForDomain = (domain) => {
+  const iconProps = "w-7 h-7 stroke-[2.5]";
   const icons = {
-    'Full Stack Web Development': <Code className="w-5 h-5 text-violet-500" />,
-    'Mobile App Development': <Smartphone className="w-5 h-5 text-blue-500" />,
-    'Frontend Development': <Layout className="w-5 h-5 text-cyan-500" />,
-    'Backend Development': <Database className="w-5 h-5 text-green-500" />,
-    'Python Development': <Terminal className="w-5 h-5 text-yellow-500" />,
-    'Data Analytics': <LineChart className="w-5 h-5 text-blue-400" />,
-    'Data Science': <Cpu className="w-5 h-5 text-emerald-500" />,
-    'Artificial Intelligence': <Brain className="w-5 h-5 text-fuchsia-500" />,
-    'Machine Learning': <Brain className="w-5 h-5 text-rose-500" />,
-    'UI/UX Design': <PenTool className="w-5 h-5 text-pink-500" />,
-    'Digital Marketing': <TrendingUp className="w-5 h-5 text-orange-500" />,
-    'Graphic Designing': <ImageIcon className="w-5 h-5 text-indigo-500" />,
-    'C/C++ Programming': <Binary className="w-5 h-5 text-slate-500" />,
+    'Full Stack Web Development': <Code className={`${iconProps} text-violet-500`} />,
+    'Mobile App Development': <Smartphone className={`${iconProps} text-blue-500`} />,
+    'Frontend Development': <Layout className={`${iconProps} text-cyan-500`} />,
+    'Backend Development': <Database className={`${iconProps} text-green-500`} />,
+    'Python Development': <Terminal className={`${iconProps} text-yellow-500`} />,
+    'Data Analytics': <LineChart className={`${iconProps} text-blue-400`} />,
+    'Data Science': <Cpu className={`${iconProps} text-emerald-500`} />,
+    'Artificial Intelligence': <Brain className={`${iconProps} text-fuchsia-500`} />,
+    'Machine Learning': <Brain className={`${iconProps} text-rose-500`} />,
+    'UI/UX Design': <PenTool className={`${iconProps} text-pink-500`} />,
+    'Digital Marketing': <TrendingUp className={`${iconProps} text-orange-500`} />,
+    'Graphic Designing': <ImageIcon className={`${iconProps} text-indigo-500`} />,
+    'C/C++ Programming': <Binary className={`${iconProps} text-slate-500`} />,
   };
-  return icons[domain] || <Briefcase className="w-5 h-5 text-violet-500" />;
+  return icons[domain] || <Briefcase className={`${iconProps} text-violet-500`} />;
 };
 
 const Internships = () => {
@@ -55,8 +56,8 @@ const Internships = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
         <AlertCircle className="w-16 h-16 text-red-500 mb-4" />
-        <h2 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Failed to load internships</h2>
-        <p className="text-slate-600 dark:text-slate-400">{error}</p>
+        <h2 className="text-2xl font-bold mb-2 text-slate-900">Failed to load internships</h2>
+        <p className="text-slate-600">{error}</p>
       </div>
     );
   }
@@ -67,12 +68,12 @@ const Internships = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-violet-200 dark:border-violet-500/30 bg-violet-50 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300 text-sm font-semibold mb-6 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 text-sm font-semibold mb-6 shadow-sm"
         >
           Explore Opportunities
         </motion.div>
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-slate-900 dark:text-white tracking-tight">Available Positions</h1>
-        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-slate-900 tracking-tight">Available Positions</h1>
+        <p className="text-slate-600 max-w-2xl mx-auto font-medium">
           Discover your next big opportunity. We're looking for passionate individuals ready to build the future across multiple technology domains.
         </p>
       </div>
@@ -90,12 +91,12 @@ const Internships = () => {
               <div className="w-12 h-12 rounded-xl bg-white dark:bg-white/5 flex items-center justify-center shadow-sm border border-slate-100 dark:border-white/10 shrink-0">
                 {getIconForDomain(job.domain)}
               </div>
-              <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 text-xs font-semibold border border-slate-200 dark:border-white/10">
-                {job.type}
+              <span className="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold border border-indigo-200 shadow-sm">
+                Remote
               </span>
             </div>
 
-            <h2 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors leading-tight">
+            <h2 className="text-xl font-bold mb-3 text-slate-900 group-hover:text-emerald-600 transition-colors leading-tight">
               {job.title}
             </h2>
 
@@ -106,7 +107,7 @@ const Internships = () => {
             <div className="flex items-center gap-4 mb-6 text-sm text-slate-500 dark:text-slate-400 font-medium">
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-fuchsia-500" />
-                {job.duration}
+                1 Month
               </div>
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-violet-500" />
@@ -130,7 +131,7 @@ const Internships = () => {
             </div>
 
             <div className="mt-auto pt-4 border-t border-slate-200 dark:border-white/10">
-              <Link to="/apply" state={{ role: job.title, domain: job.domain }} className="w-full btn-outline py-2.5 border-violet-200 dark:border-white/10 text-violet-700 dark:text-white hover:bg-violet-50 dark:hover:bg-white/5">
+              <Link to="/apply" state={{ role: job.title, domain: job.domain }} className="w-full btn-outline py-2.5 border-emerald-200 text-emerald-700 hover:bg-emerald-50 active:bg-emerald-700 active:text-white transition-all duration-200">
                 Apply Now <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
