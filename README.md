@@ -99,6 +99,13 @@ Due to limited cloud database resources, a production MongoDB Atlas deployment h
 The application architecture is fully prepared for MongoDB Atlas or any production database integration in the future.
 
 ---
+## 🌐 Live Demo
+
+🔗 https://teyzix-core-internship-portal-fs2.vercel.app/
+
+> **Note:** The Internships page currently shows a network error because internship data is fetched through backend API calls. This deployment currently includes only the frontend UI. Once the backend server is  live, the Internships page will function properly.
+
+---
 
 ## 🚀 Getting Started
 
