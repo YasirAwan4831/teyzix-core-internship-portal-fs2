@@ -88,6 +88,17 @@
 </div>
 
 ---
+## Database Note
+
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green?style=flat-square&logo=mongodb)
+
+This project currently uses a local/in-memory MongoDB setup for development and demonstration purposes.
+
+Due to limited cloud database resources, a production MongoDB Atlas deployment has not been configured yet.
+
+The application architecture is fully prepared for MongoDB Atlas or any production database integration in the future.
+
+---
 
 ## 🚀 Getting Started
 
