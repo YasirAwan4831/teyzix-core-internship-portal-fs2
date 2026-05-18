@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=21&duration=3200&pause=900&color=61DAFB&center=true&vCenter=true&width=760&lines=🚀+Modern+Full-Stack+Internship+Portal;⚛️+React+%7C+Node.js+%7C+MongoDB+%7C+Express.js;🎨+Smooth+Animations+%7C+Dark+Mode+%7C+REST+API;💼+Built+for+Students+%26+Administrators" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=21&duration=3200&pause=900&color=61DAFB&center=true&vCenter=true&width=760&lines=🚀+Modern+MERN+Stack+Internship+Portal;⚛️+MongoDB+%7C+Express.js+%7C+React.js+%7C+Node.js;🎨+Smooth+Animations+%7C+Dark+Mode+%7C+REST+API;💼+Built+for+Students+%26+Administrators" />
 
 <br/>
 
