@@ -20,6 +20,18 @@
     --nav-bg: rgba(255, 255, 255, 0.8);
     --nav-border: #e2e8f0;
   }
+
+  .dark {
+    --bg-main: #090d16;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --panel-bg: rgba(15, 23, 42, 0.75);
+    --panel-border: rgba(51, 65, 85, 0.6);
+    --input-bg: #0f172a;
+    --input-border: #1e293b;
+    --nav-bg: rgba(9, 13, 22, 0.85);
+    --nav-border: rgba(30, 41, 59, 0.8);
+  }
 }
 
 body {
