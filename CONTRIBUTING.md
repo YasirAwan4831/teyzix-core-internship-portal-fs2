@@ -1,6 +1,6 @@
 # Contributing to TEYZIX CORE Portal
 
-Thank you for your interest in contributing to TEYZIX CORE Portal! We welcome contributions from the community.
+Thank you for your interest in contributing to TEYZIX CORE Portal! I welcome contributions from the community.
 
 ## Getting Started
 
@@ -35,6 +35,7 @@ Thank you for your interest in contributing to TEYZIX CORE Portal! We welcome co
 - Use proper HTTP status codes
 - Implement error handling middleware
 - Add request validation
+- Create MongoDB Alter Database
 
 ### Commit Messages
 - Use clear, descriptive commit messages
@@ -60,15 +61,15 @@ When reporting bugs, please include:
 
 ## Feature Requests
 
-We'd love to hear your ideas! When suggesting features:
+I'd love to hear your ideas! When suggesting features:
 - Describe the use case
 - Explain the expected behavior
 - Provide mockups/wireframes if applicable
 
 ## Questions?
 
-Feel free to open an issue for discussions or contact us directly.
+Feel free to open an issue for discussions or contact me directly.
 
 ---
 
-Thank you for contributing! ❤️
+Thank you for contributing! 
