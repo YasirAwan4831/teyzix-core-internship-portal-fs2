@@ -23,7 +23,8 @@ const Admin = () => {
 
   const fetchApplications = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/applications');
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+      const { data } = await axios.get(`${apiUrl}/applications`);
       setApplications(data);
       setLoading(false);
     } catch (err) {

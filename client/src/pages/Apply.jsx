@@ -45,7 +45,8 @@ const Apply = () => {
     setStatus({ loading: true, error: null, success: false });
 
     try {
-      await axios.post('http://localhost:5000/api/applications', formData);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+      await axios.post(`${apiUrl}/applications`, formData);
       setStatus({ loading: false, error: null, success: true });
       setTimeout(() => {
         navigate('/');

@@ -32,7 +32,8 @@ const Internships = () => {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/internships');
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+        const { data } = await axios.get(`${apiUrl}/internships`);
         setInternships(data);
         setLoading(false);
       } catch (err) {
